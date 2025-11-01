@@ -1,0 +1,278 @@
+body {
+  font-family: "Momo Trust Display", "Courier New", Courier, monospace;
+  /* background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 42), orange, purple);
+   */
+   background: linear-gradient(to right, red 0%, yellow 50%, blue, orange );
+
+  /* background: url(./images/maths-bg.jpg) center/cover no-repeat; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  position: fixed;
+  top: 20px;
+  left: 1px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: 2px solid ghostwhite;
+  border-radius: 20px;
+
+  /* Background with depth */
+  background: linear-gradient(to bottom, #f0f0f0 0%, #ccc 40%, #000 100%);
+  
+  /* 3D illusion via inner shadow and depth */
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.3), /* soft top light */
+    inset 0 -2px 6px rgba(0, 0, 0, 0.5),      /* bottom shadow */
+    0 4px 10px rgba(0, 0, 0, 0.6);            /* outer drop shadow */
+
+  /* Slight text shadow to make text pop */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  /* Optional shiny "glare" overlay effect */
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(254, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 0, 0, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: glare 2.5s infinite;
+}
+
+@keyframes glare {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.title:hover {
+  background: linear-gradient(to left, red, green);
+  font-size: 31px;
+  color: white;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+button {
+  font-family: "Momo Trust Display";
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+.inputBox {
+  border: solid black 5px;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.inputBox:hover {
+  border: solid rgb(255, 255, 255) 5px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+
+  border-radius: 30px;
+}
+
+.base2 {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base2:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(64, 255, 0);
+}
+.base2:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(113, 188, 88);
+}
+
+.base3 {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(50, 0, 50);
+  box-shadow: 0px 0px 10px rgb(200, 0, 200);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base3:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(150, 0, 150);
+}
+.base3:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 50, 200);
+}
+
+.base4 {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 200, 0);
+  box-shadow: 0px 0px 10px rgb(255, 150, 0);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base4:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 150, 0);
+}
+.base4:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 50, 0);
+}
+
+.base5 {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 50, 255);
+  box-shadow: 0px 0px 10px rgb(0, 150, 255);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base5:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 150, 255);
+}
+.base5:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 50, 200);
+}
+
+.base6 {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 255, 255);
+  box-shadow: 0px 0px 10px rgb(0, 200, 200);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base6:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 200, 200);
+}
+.base6:active {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 150, 150);
+}
+
+.base7 {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 128);
+  box-shadow: 0px 0px 10px rgb(200, 0, 50);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base7:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 0, 50);
+}
+.base7:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(150, 0, 75);
+}
+
+.base8 {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(200, 255, 0);
+  box-shadow: 0px 0px 10px rgb(150, 200, 0);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base8:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(150, 200, 0);
+}
+.base8:active {
+  color: rgb(0, 0, 0);
+  background-color: rgb(50, 150, 0);
+}
+
+.base9 {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(128, 0, 255);
+  box-shadow: 0px 0px 10px rgb(50, 0, 200);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.base9:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(50, 0, 200);
+}
+.base9:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(75, 0, 150);
+}
+
+.base10 {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px rgb(255, 0, 0);
+  width: 70%;
+  height: 100px;
+  cursor: pointer;
+}
+.base10:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+}
+.base10:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(216, 112, 112);
+}
